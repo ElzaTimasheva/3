@@ -7,6 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Width="200" Height="50" Content="123" FontSize="30" Background="Red"></Button>
+
+
+        <WrapPanel>
+            <Button Background="AliceBlue" Content="Кнопка 1"></Button>
+            <Button Background="Blue" Content="Кнопка 2"></Button>
+            <Button Background="Aquamarine" Content="Кнопка 3" Height="30"></Button>
+            <Button Background="DarkGreen" Content="Кнопка 4" Height="20"></Button>
+            <Button Background="LightGreen" Content="Кнопка 5"></Button>
+            <Button Background="RosyBrown" Content="Кнопка 6" Width="250" ></Button>
+            <Button Background="GhostWhite" Content="Кнопка 7" ></Button>
+        </WrapPanel>
+
+
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Name="textBox" Width="150" Height="30" 
+                 VerticalAlignment="Top" Margin="10"></TextBox>
+
+        <Button Width="200" Height="50" Content="123" FontSize="30" Background="Red" 
+                Name="CloseBtn" Click="CloseBtn_Click"
+                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"></Button>
+        <StackPanel></StackPanel>
+            <Button Grid.Column="0" Grid.Row="1" Background="Blue" Content="1" ></Button>
+        <Button Grid.Column="1" Grid.Row="1" Background="Yellow" Content="2"></Button>
+        <Button Grid.Column="2" Grid.Row="1" Background="Red" Content="3"></Button>
+  
+
     </Grid>
 </Window>

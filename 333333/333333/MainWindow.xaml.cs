@@ -24,5 +24,11 @@ namespace _333333
         {
             InitializeComponent();
         }
+
+        
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(textBox.Text);
+        }
     }
 }
